@@ -19,6 +19,7 @@ html {
 
 body {
     font-family: 'Varela Round', sans-serif;
+    position: relative;
 }
 
 h1,
@@ -305,6 +306,7 @@ header .container label[for="bars"] {
 /* End header */
 /* Start Home Section  */
 .home {
+    position: relative;
     height: 100vh;
     background: linear-gradient(to right, rgba(255 255 255 / 10%), rgba(255 255 255 / 10%)),
         linear-gradient(to right, rgba(0 0 0 / 80%), rgba(0 0 0 / 80%)),
@@ -1545,3 +1547,55 @@ footer p span {
 }
 
 /* End Footer */
+/* Start Scroll To Top */
+
+.to-top {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    height: 100%;
+    padding-top: 150vh;
+    z-index: 1;
+}
+
+.to-top a {
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    position: sticky;
+    top: calc(100vh - 60px);
+    color: var(--mainColor-1);
+    background-color: var(--mainColor-2);
+    border-radius: 3px;
+    font-size: xx-small;
+    transition: opacity 250ms;
+}
+
+.to-top a:hover {
+    opacity: .9;
+}
+
+.to-top a::before {
+    display: block;
+    animation: translatey 2s infinite;
+}
+
+@keyframes translatey {
+
+    20%,
+    40% {
+        transform: translateY(-1.5px);
+    }
+
+    30%,
+    50% {
+        transform: translateY(3px);
+    }
+
+    60%,
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* End Scroll To Top */
